@@ -1,0 +1,315 @@
+/* MAIN */
+:root {
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-black: #141d28;
+    --color-black-1: #212b38;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: khaki;
+}
+
+/* NAVBAR */
+.gamepad {
+    text-align: center;
+    font-size: 3.5rem;
+    color: white;
+    border-bottom: 4px solid black;
+}
+
+.logo {
+    color: var(--color-white);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--color-primary);
+}
+
+.menu-bar {
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    transition: 1s;
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+    transition: 1s;
+}
+
+.menu-bar ul li {
+    padding: 10px 30px;
+    position: relative;
+    transition: 1s;
+}
+
+.menu-bar ul li a {
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: 1s;
+    transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+    color: var(--color-primary);
+}
+
+.fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.dropdown-menu {
+    display: none;
+    border-radius: 5px;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 96%;
+    background-color: var(--color-black);
+
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu-bar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-bar ul li {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+    }
+}
+
+/* About Section */
+.MainSection {
+    margin-bottom: 100px;
+    margin: 100px;
+    border: 3px solid var(--color-black-1);
+}
+
+.header {
+    background-color: var(--color-black);
+    color: white;
+    font-size: 3rem;
+    padding: 30px;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 4px solid black;
+}
+.mainSection2 {
+    display: flex;
+    padding: 20px;
+    background-color: white;
+}
+
+.about-description {
+    padding: 20px;
+    border-right: 2px solid black;
+    font-size: larger;
+}
+
+.about-description p {
+    margin-bottom: 40px;
+    font-size: large;
+    text-align: justify;
+    font-family: cursive;
+}
+
+.about-description h4{
+    margin: 20px;
+    text-align: center;
+    border-top: 3px solid black;
+    padding: 10px;
+    font-size: larger;
+}
+/* FOOTER SECTION */
+.footerMain {
+    background: #212b38;
+    color: white;
+}
+
+.footer {
+    background: #212b38;
+    color: white;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 60px;
+    border-bottom: 3px solid khaki;
+}
+
+.footer-nav {
+    border-right: 1px solid white;
+    padding: 50px;
+}
+
+.footer-nav h3 {
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid white;
+    font-size: 2.5rem;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.footer-nav a:hover {
+    color: lightblue;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding-left: 0px;
+    text-align: left;
+}
+
+.footer-nav ul li {
+    margin-bottom: 20px;
+}
+
+.footer-games {
+    border-right: 1px solid white;
+    padding-right: 90px;
+}
+
+.footer-games h3 {
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.footer-games a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.footer-games a:hover {
+    color: lightblue;
+}
+
+.footer-games ul {
+    list-style: none;
+    padding-left: 0px;
+    text-align: left;
+}
+
+.footer-games ul li {
+    margin-bottom: 20px;
+}
+
+
+.footer-contact h3 {
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.footer-contact a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.footer-contact a:hover {
+    color: lightblue;
+}
+
+.footer-contact ul {
+    list-style: none;
+    padding-left: 0px;
+    text-align: left;
+}
+
+.footer-contact ul li {
+    margin-bottom: 20px;
+}
+
+.footer-additional {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.footer-additional a{
+    text-decoration: none;
+}
+
+.designer {
+    color: #0073ff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-nav, .footer-games, .footer-contact {
+        border-right: none;
+        padding: 30px 0;
+    }
+}
