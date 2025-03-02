@@ -66,10 +66,9 @@ function checkRoundWinner() {
             drawnRounds++;
             localStorage.setItem("roundsDrawn", drawnRounds);
             roundsDrawn.innerText = drawnRounds;
-            result = "draw"; // NEW: Handle 3 draws scenario
+            result = "draw";
         }
 
-        // Show the modal when a round ends
         showModal(result, result === "win");
 
         resetRound(); // Reset round scores
@@ -77,7 +76,7 @@ function checkRoundWinner() {
 }
 
 
-
+// Win or loss popup
 function showModal(result, isVictory) {
     const gameModal = document.getElementById("gameModal");
     const modalTitle = document.getElementById("modalTitle");
@@ -114,7 +113,6 @@ function resetRound() {
     drawCount.innerText = 0;
 }
 
-// Load stored data when the page refreshes
 function loadGameData() {
     playerRoundsWon.innerText = localStorage.getItem("playerRoundsWon") || 0;
     computerRoundsWon.innerText = localStorage.getItem("computerRoundsWon") || 0;
