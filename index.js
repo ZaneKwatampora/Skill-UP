@@ -173,6 +173,7 @@ function displayGames(games) {
 
     const gameTitleEl = document.createElement("h2");
     gameTitleEl.innerText = game.name;
+    gameTitleEl.innerText = game.info;
     
     const gameDomainEl = document.createElement('a');
     if (game.stores && game.stores.length > 0) {
