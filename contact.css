@@ -1,7 +1,7 @@
 :root {
     --color-primary: #0073ff;
     --color-white: #e9e9e9;
-    --color-black: #141d28;
+    --color-black: black;
     --color-black-1: #212b38;
 }
 
@@ -13,7 +13,7 @@
 
 body {
     font-family: sans-serif;
-    background-color: khaki;
+    background-color: gray;
     font-family: Arial, sans-serif;
 }
 
@@ -225,12 +225,12 @@ body {
 
 /* FOOTER SECTION */
 .footerMain {
-    background: #212b38;
+    background: black;
     color: white;
 }
 
 .footer {
-    background: #212b38;
+    background: black;
     color: white;
     display: flex;
     gap: 40px;

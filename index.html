@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2299a05217.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
-    <title>Skill-UP</title>
+    <title>Skill-UP 🎮</title>
 </head>
 
 <body>
     <nav>
         <div class="menu-bar">
             <a href="index.html" class="logo">
-                <h1 class="logo">Skill-UP <i class="fa-regular fa-hand-pointer"></i></h1>
+                <h1 class="logo">Skill-UP <i class="fa-regular fa-circle-up"></i></h1>
             </a>
             <div>
                 <ul>
@@ -41,37 +41,42 @@
     </nav>
     <section id="Hero">
         <div class="hero-main">
-            <div class="heroimg">
-                <h1>WELCOME TO SKILL-UP</h1>
-            </div>
-            <div class="hero-sub">
-                <p>
-                    Looking for the perfect game to play? Our website offers a diverse selection of fun online games,
-                    including classics like Tic Tac Toe, Rock Paper Scissors, and Whac-A-Mole, along with random game
-                    recommendations to help you discover something new or revisit an old favorite. Whether you're in the
-                    mood for a quick challenge, a casual time-killer, or an exciting new adventure, there's always
-                    something to enjoy. With endless possibilities, you'll never run out of games to try. Start
-                    exploring now and jump into the fun!
-                </p>
-                <h1 class="randomh1">Play Now!!!</h1>
-                <div class="game-grid">
-                    <div class="game-card">
-                        <a href="ttt.html">
-                            <img src="assets/tictactoe.png" alt="Tic Tac Toe" class="Images">
-                            <h2>Tic Tac Toe</h2>
-                        </a>
-                    </div>
-                    <div class="game-card">
-                        <a href="pong.html">
-                            <img src="assets/pong2.jpg" alt="Pong" class="Images">
-                            <h2>Pong</h2>
-                        </a>
-                    </div>
-                    <div class="game-card">
-                        <a href="rps.html">
-                            <img src="assets/Rock-Paper-Scissors.jpeg" alt="Rock Paper Scissors" class="Images">
-                            <h2>Rock Paper Scissors</h2>
-                        </a>
+            <div class="heroImportant">
+                <div class="heroh1">
+                    <h1>WELCOME TO SKILL-UP</h1>
+                </div>
+                <div class="hero-sub">
+                    <p>
+                        Looking for the perfect game to play? Our website offers a diverse selection of fun online
+                        games,
+                        including classics like Tic Tac Toe, Rock Paper Scissors, and Whac-A-Mole, along with random
+                        game
+                        recommendations to help you discover something new or revisit an old favorite. Whether you're in
+                        the
+                        mood for a quick challenge, a casual time-killer, or an exciting new adventure, there's always
+                        something to enjoy. With endless possibilities, you'll never run out of games to try. Start
+                        exploring now and jump into the fun!
+                    </p>
+                    <h1 class="randomh1">Play Now!!!</h1>
+                    <div class="game-grid">
+                        <div class="game-card">
+                            <a href="ttt.html">
+                                <img src="assets/tictactoe.png" alt="Tic Tac Toe" class="Images">
+                                <h2>Tic Tac Toe</h2>
+                            </a>
+                        </div>
+                        <div class="game-card">
+                            <a href="pong.html">
+                                <img src="assets/pong2.jpg" alt="Pong" class="Images">
+                                <h2>Pong</h2>
+                            </a>
+                        </div>
+                        <div class="game-card">
+                            <a href="rps.html">
+                                <img src="assets/Rock-Paper-Scissors.jpeg" alt="Rock Paper Scissors" class="Images">
+                                <h2>Rock Paper Scissors</h2>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -99,6 +104,16 @@
                 </div>
             </div>
         </div>
+        <div class="games3">
+            <div class="game-box">
+                <div id="ttt">
+                    <a href="ttt.html" id="tttLink" onmouseover="showTttInfo()" onmouseleave="hideTttInfo()">
+                        <h1>Tic Tac Toe</h1>
+                        <img src="assets/tictactoe.png" alt="Tic Tac Toe img">
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="games2">
             <div class="game-box">
                 <div id="pong">
@@ -117,39 +132,36 @@
                 </div>
             </div>
         </div>
-        <div class="games3">
-            <div class="game-box">
-                <div id="ttt">
-                    <a href="ttt.html" id="tttLink" onmouseover="showTttInfo()" onmouseleave="hideTttInfo()">
-                        <h1>Tic Tac Toe</h1>
-                        <img src="assets/tictactoe.png" alt="Tic Tac Toe img">
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
     <section id="Reccomendation">
         <div id="gameReccomendation">
             <h1>Games you should try play</h1>
             <p>Looking for free or paid games to play? Look no further! With this randomized game generator, you can
-                discover exciting games and save them for later. Please note that you'll need to download the games from
+                discover exciting games and save them for later.</p>
+            <p class="P">Please note that you'll need to download the games from
                 their respective platforms.</p>
         </div>
-        <div class="explorerName">
-            <h1>Game Explorer</h1>
-        </div>
-        <div class="gameExplorer">
-            <div>
-                <input type="search" id="searchInput" placeholder="Search games..." class="searchInput" />
-                <button type="submit" onclick="searchGames()" class="searchButton">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
-            <a href="toplay.html">Saved Games <i class="fa-sharp fa-solid fa-book-open"></i></a>
-        </div>
-        <div>
-            <div class="container">
-                <ul id="game-list" class="game-list"></ul>
+        <div class="explorerSection">
+            <div class="scaleExp">
+                <div class="explorerSearch">
+                    <div class="explorerName">
+                        <h1>Game Explorer</h1>
+                    </div>
+                    <div class="gameExplorer">
+                        <div>
+                            <input type="search" id="searchInput" placeholder="Search games..." class="searchInput" />
+                            <button type="submit" onclick="searchGames()" class="searchButton">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                        <a href="toplay.html">Saved Games <i class="fa-sharp fa-solid fa-book-open"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="container">
+                        <ul id="game-list" class="game-list"></ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

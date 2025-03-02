@@ -13,7 +13,7 @@
 
 body {
     font-family: sans-serif;
-    background-color: khaki;
+    background-color: gray;
 }
 
 
@@ -37,7 +37,7 @@ body {
 }
 
 .menu-bar {
-    background-color: var(--color-black);
+    background-color: black;
     height: 80px;
     width: 100%;
     display: flex;
@@ -87,14 +87,12 @@ body {
 .menu-bar ul li:hover .dropdown-menu {
     display: block;
     position: absolute;
-    left: 0;
     top: 96%;
     background-color: var(--color-black);
 
 }
 
 .menu-bar ul li:hover .dropdown-menu ul {
-    display: block;
     margin: 10px;
 }
 
@@ -131,22 +129,29 @@ body {
 /* HERO SECTION */
 
 #Hero {
-    background-color: khaki;
-    padding: 100px;
-}
-
-.heroimg {
-    text-align: center;
-    font-size: 2.0rem;
-    padding: 50px 0;
-    background-color: var(--color-black);
-    color: white;
+    height: 110vh;
+    display: grid;
+    place-items: center;
+    background-image: url(assets/actualbg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero-main {
-    margin: 20px 10px;
     border: 4px solid black;
     background-color: white;
+    scale: .7;
+}
+
+.heroh1 {
+    padding: 10px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .hero-sub {
@@ -154,11 +159,13 @@ body {
 }
 
 .hero-sub>p {
+    text-align: center;
     padding: 40px;
     font-size: larger;
     font-weight: 400;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
+    font-size: 1.5rem;
 }
 
 
@@ -198,37 +205,56 @@ body {
 
 .game-card:hover {
     transform: scale(1.05);
+    background-color: gray;
+    border-radius: 10px;
+}
+@media (max-width: 1024px) {
+    #Hero {
+        height: auto;
+    }
+
+    .hero-main {
+        max-width: 95%;
+    }
+
+    .heroh1 {
+        font-size: 1.8rem;
+        padding: 15px;
+    }
+
+    .hero-sub > p {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
 }
 
 @media (max-width: 768px) {
     .game-grid {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
 
     .game-card {
-        width: 90%;
+        width: 100%;
+        max-width: 300px;
     }
-}
 
-
-@media (max-width: 768px) {
     .heroGrid {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
-    .heroGrid>img {
-        width: 120px;
+    .heroGrid > img {
+        width: 100px;
     }
 }
 
-
 /* GAME SECTION */
 #gameSection {
-    background-color: darkkhaki;
     padding: 100px 20px;
-    border-bottom: 3px solid black;
     border-top: 3px solid black;
 }
 
@@ -238,18 +264,22 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 3rem;
     color: white;
-    background-color: #141d28;
+    background-color:  black;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
     padding: 30px;
-    margin: 0px auto 60px;
-    display: block;
 }
 
 /* Games Section*/
 /* GAME 1 */
 .games1 {
-    display: flex;
-    justify-content: center;
-    gap: 300px;
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   margin-left: 150px;
+    justify-content: left;
+    gap: 30px;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -286,14 +316,14 @@ body {
 
 /* GAME 2 */
 .games2 {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    gap: 50px;
+    margin-left: 150px;
+    gap: 30px;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    margin-top: 10px;
 }
 
 .games2 a {
@@ -338,7 +368,7 @@ body {
 .games3 {
     display: flex;
     justify-content: center;
-    gap: 300px;
+    margin: 100px;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -399,56 +429,117 @@ body {
     scale: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .games1, .games2, .games3 {
+        grid-template-columns: 1fr; 
+        gap: 25px;
+        justify-content: center;
+        margin-left: 0;
+        display: block;
+        justify-content: center;
+    }
+
+    .games1 img, .games2 img, .games3 img {
+        max-width: 280px;
+        height: auto;
+    }
+
     .gameh3 {
-        font-size: 3rem;
-        margin: 0 auto 40px;
-    }
-
-    .games1 {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-
-    .games2 {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .games3 {
-        flex-direction: column;
-        gap: 20px;
+        font-size: 2.5rem;
+        margin: 0 50px 40px;
+        padding: 25px;
     }
 
     .game-box {
-        width: 100%;
+        width: 80%;
         max-width: 350px;
     }
 }
+
+@media (max-width: 768px) {
+    .games1, .games2, .games3 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+        display: block;
+        justify-content: center;
+    }
+
+    .games1 img, .games2 img, .games3 img {
+        max-width: 250px;
+    }
+
+    .gameh3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .game-box {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .games1, .games2, .games3 {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin: 0;
+        gap: 15px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .games1 img, .games2 img, .games3 img {
+        max-width: 200px;
+    }
+
+    .gameh3 {
+        font-size: 1.8rem;
+        margin: 0 20px 15px;
+        padding: 15px;
+    }
+
+    .games3 {
+        margin-left: 0;
+        justify-content: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .game-box {
+        width: 95%;
+        padding: 30px;
+    }
+}
+
 
 
 /* GAMES RECOMMENDATION SECTION */
 
 /* General Styles */
-#Reccomendation {
-    padding-top: 50px;
+
+.explorerSection {
+    background-image: url(assets/bg3.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    padding-top: 30px;
+}
+.scaleExp {
+    scale: 0.9;
 }
 
 #gameReccomendation {
-    margin: 10px;
     padding: 10px;
     padding-top: 20px;
     color: white;
-    background-color: #212b38;
-    border-radius: 4px;
-    margin-left: 50px;
-    margin-right: 50px;
+    background-color: black;
+    border-bottom: 2px solid white;
 }
 
 #gameReccomendation h1 {
     text-align: center;
-    font-family:Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
     font-size: 3rem;
     border-bottom: 3px solid white;
     margin-left: 100px;
@@ -466,10 +557,30 @@ body {
     font-size: larger;
 }
 
+.P1 {
+    padding: 0px;
+}
+
 .explorerName {
     text-align: center;
-    margin-top: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
     font-size: 2rem;
+    background-color: black;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 2px solid black;
+}
+
+.explorerSearch {
+    background-color: gray;
+    padding-bottom: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: -100px;
 }
 
 .gameExplorer {
@@ -482,7 +593,6 @@ body {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 5px;
 }
 
 .gameExplorer input:focus[type="search"] {
@@ -492,7 +602,7 @@ body {
 }
 
 .gameExplorer button {
-    background: chocolate;
+    background: black;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -503,7 +613,7 @@ body {
 
 .gameExplorer a {
     text-decoration: none;
-    background-color: chocolate;
+    background-color: black;
     padding: 10px;
     color: white;
     border-radius: 5px;
@@ -512,7 +622,7 @@ body {
 
 .gameExplorer a:hover {
     scale: 1.2;
-    background-color: brown;
+    background-color: darkslategray;
 }
 
 .container {
@@ -523,8 +633,14 @@ body {
     justify-content: center;
 }
 
-.container a{
+.container a {
     text-decoration: none;
+    color: lightseagreen;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container a:hover {
+    color: seagreen;
 }
 
 .game-list {
@@ -568,7 +684,7 @@ body {
 .game-item button {
     display: block;
     width: 100%;
-    background: #212b38;
+    background: black;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -580,36 +696,52 @@ body {
 }
 
 .game-item button:hover {
-    background: white;
-    color: black;
-    transform: scale(1);
+    background: black;
+    color: white;
+    transform: scale(1.03);
     border: 1px solid black;
 }
 
 
 
-@media screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 25px;
-    }
-}
-
 @media screen and (max-width: 480px) {
-    .container {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    #gameReccomendation h1 {
+        font-size: 1.5rem;
+    }
+
+    #gameReccomendation p {
+        font-size: 0.9rem;
+    }
+
+    .explorerName {
+        font-size: 1.5rem;
+    }
+
+    .gameExplorer {
+        flex-direction: column; 
+    }
+
+    .explorerSearch {
+        margin-top: -400px;
+    }
+
+    .gameExplorer input[type="search"] {
+        width: 100%;
+    }
+
+    .gameExplorer button,
+    .gameExplorer a {
+        width: 100%;
     }
 }
-
 /* FOOTER SECTION */
 .footerMain {
-    background: #212b38;
+    background: black;
     color: white;
 }
 
 .footer {
-    background: #212b38;
+    background: black;
     color: white;
     display: flex;
     gap: 40px;
@@ -618,7 +750,7 @@ body {
     padding-left: 70px;
     padding-right: 70px;
     padding-bottom: 60px;
-    border-bottom: 3px solid khaki;
+    border-bottom: 1px solid khaki;
 }
 
 .footer-nav {
