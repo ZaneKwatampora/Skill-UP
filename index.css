@@ -523,6 +523,10 @@ body {
     justify-content: center;
 }
 
+.container a{
+    text-decoration: none;
+}
+
 .game-list {
     list-style: none;
     margin: 0px;
