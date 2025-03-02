@@ -1,36 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2299a05217.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="minesweeper.css">
+    <script type="module" src="minesweeper2.js"></script>
     <title>Minesweeper</title>
 </head>
+
 <body>
+    <!-- NAVBAR -->
     <nav>
         <div class="menu-bar">
             <a href="index.html" class="logo">
                 <h1 class="logo">Skill-UP <i class="fa-regular fa-hand-pointer"></i></h1>
             </a>
-            <div>
-                <ul>
-                    <li>
-                        <h1 class="gamepad"><i class="fa-solid fa-gamepad"></i></h1>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li><a href="hangman.html">Hangman</a></li>
-                                <li><a href="minesweeper.html">Mine Sweeper</a></li>
-                                <li><a href="pong.html">Ping Pong</a></li>
-                                <li><a href="chess.html">Chess</a></li>
-                                <li><a href="rps.html">Rock Paper Scissors</a></li>
-                                <li><a href="ttt.html">Tic Tac Toe</a></li>
-                                <li><a href="whac.html">Whac-a-Mole</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -40,8 +26,28 @@
         </div>
     </nav>
 
+    <!-- Game Section -->
+    <section class="gameSection">
+        <div class="mainGame">
+            <h3 class="title">Minesweeper</h3>
+            <div class="subtext">
+                Mines Left: <span data-mine-count></span>
+            </div>
+            <div class="gameCounter">
+                <p>Wins: <span data-win-count>0</span></p>
+                <p>Losses: <span data-lose-count>0</span></p>
+            </div>
+            <div class="importantGame">
+                <div class="board"></div>
+            </div>
+            <div class="pTags">
+                <p>Don't know how to play? <i class="fa-solid fa-arrow-right"></i> <a href="https://youtu.be/dvvrOeITzG8?si=cPG8Kr79-UJ3_bee" target="_blank" rel="noopener noreferrer">Click Here</a> <i class="fa-solid fa-arrow-left"></i></p>
+                <button onclick="refreshPage()" id="button" aria-label="Refresh Page"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+            </div>
+        </div>
+    </section>
 
-    
+    <!-- FOOTER -->
     <footer class="footerMain">
         <div class="footer">
             <div class="footer-nav">
@@ -87,6 +93,7 @@
                     target="_blank" rel="noopener noreferrer"><span class="designer">Zane Kwatampora</span></a></p>
         </div>
     </footer>
-    <script src="minesweeper.js"></script>
+    <script type="module" src="minesweeper2.js"></script>
 </body>
+
 </html>

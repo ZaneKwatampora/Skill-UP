@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,13 @@
     <link rel="stylesheet" href="rps.css">
     <title>Rock Paper Scissors</title>
 </head>
+
 <body>
     <nav>
         <div class="menu-bar">
             <a href="index.html" class="logo">
                 <h1 class="logo">Skill-UP <i class="fa-regular fa-hand-pointer"></i></h1>
             </a>
-            <div>
-                <ul>
-                    <li>
-                        <h1 class="gamepad"><i class="fa-solid fa-gamepad"></i></h1>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li><a href="hangman.html">Hangman</a></li>
-                                <li><a href="minesweeper.html">Mine Sweeper</a></li>
-                                <li><a href="pong.html">Ping Pong</a></li>
-                                <li><a href="chess.html">Chess</a></li>
-                                <li><a href="rps.html">Rock Paper Scissors</a></li>
-                                <li><a href="ttt.html">Tic Tac Toe</a></li>
-                                <li><a href="whac.html">Whac-a-Mole</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -40,8 +24,59 @@
         </div>
     </nav>
 
+    <!-- GAME SECTION -->
+    <section class="gameSection">
+        <div class="mainGame">
+            <div class="displayMain">
+                <div class="main-box">
+                    <h2 id="gamesH2">Make your choice!</h2>
+                    <p id="gameP">First to 3 points</p>
 
-    
+                    <div class="games">
+                        <div class="gamesPlayed">
+                            <p class="mainP">Games Played: <span id="gamesPlayed" class="span">0</span></p>
+                            <div class="win-loss">
+                                <p>Player Score: <span id="playerCount" class="span">0</span></p>
+                                <p>Computer Score: <span id="computerCount" class="span"></span></p>
+                            </div>
+                            <div class="draws">
+                                <p> Games Drawn: <span id="drawCount" class="span">3</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="choices">
+                        <button class="btn" id="button1" onclick="buttonChoice('rock')"><i
+                                class="fa-solid fa-hand-back-fist"></i></button>
+                        <button class="btn" id="button2" onclick="buttonChoice('paper')"><i
+                                class="fa-solid fa-hand"></i></button>
+                        <button class="btn" id="button3" onclick="buttonChoice('scissors')"><i
+                                class="fa-solid fa-hand-scissors"></i></button>
+                    </div>
+                </div>
+
+                <div class="roundsPlayed">
+                    <h3>Rounds</h3>
+                    <div class="p" id="p1"><p>Rounds Played: <span id="roundsPlayed">0</span></p></div>
+                    <div class="p" id="p2"><p>User Wins: <span id="playerRoundsWon">0</span></p></div>
+                    <div class="p" id="p3"><p>CPU Wins: <span id="computerRoundsWon">0</span></p></div>
+                    <div class="p" id="p3"><p>Games Drawn: <span id="roundsDrawn">0</span></p></div>
+                </div>
+            </div>
+
+            <div id="gameModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2 id="modalTitle">Game Over</h2>
+                    <p id="modalMessage">You won this round!</p>
+                    <img id="modalImage" src="" alt="Game Result">
+                    <button class="btn" onclick="closeModal()">OK</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <footer class="footerMain">
         <div class="footer">
             <div class="footer-nav">
@@ -89,4 +124,5 @@
     </footer>
     <script src="rps.js"></script>
 </body>
+
 </html>

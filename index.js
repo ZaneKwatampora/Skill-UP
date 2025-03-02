@@ -138,7 +138,8 @@ const searchInput = document.getElementById("searchInput");
 
 async function getGames(query = "") {
   try {
-    let url = `https://api.rawg.io/api/games?key=${API_KEY}&dates=2022-01-01,2022-12-31&ordering=-added`;
+    let url = `https://api.rawg.io/api/games?key=${API_KEY}`
+    // let url = `https://api.rawg.io/api/games?key=${API_KEY}&dates=2022-01-01,2022-12-31&ordering=-added`;
 
     if (query) {
       url = `https://api.rawg.io/api/games?key=${API_KEY}&search=${query}&ordering=-added`;
@@ -172,6 +173,17 @@ function displayGames(games) {
 
     const gameTitleEl = document.createElement("h2");
     gameTitleEl.innerText = game.name;
+    
+    const gameDomainEl = document.createElement('a');
+    if (game.stores && game.stores.length > 0) {
+      const store = game.stores[0].store;
+  
+      gameDomainEl.href = `https://${store.domain}`;
+      gameDomainEl.target = "_blank";
+      gameDomainEl.rel = "noopener noreferrer";
+      gameDomainEl.innerText = `Buy ${game.name}`; 
+  } 
+
 
     const gameButtonEl = document.createElement("button");
     gameButtonEl.innerHTML = "Save Game";
@@ -181,6 +193,7 @@ function displayGames(games) {
 
     gameItemEl.appendChild(gameImageEl);
     gameItemEl.appendChild(gameTitleEl);
+    gameItemEl.appendChild(gameDomainEl);
     gameItemEl.appendChild(gameButtonEl);
     gameListEl.appendChild(gameItemEl);
   });

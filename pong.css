@@ -127,6 +127,37 @@ body {
 }
 
 
+/* GAME SECTION */
+.gameSection {
+    background-color: white;
+    margin: 90px;
+    border-radius: 10px;
+    scale: .9;
+    color: #141d28;
+    display: flex;
+    justify-content: center;
+
+}
+
+.mainGame {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 100px;
+}
+
+.mainGame p{
+    margin: 30px;
+}
+
+.mainGame h1 {
+    margin-bottom: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 200%;
+}
 
 /* FOOTER SECTION */
 .footerMain {

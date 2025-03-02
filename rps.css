@@ -126,7 +126,236 @@ body {
     }
 }
 
+/* GAME SECTION */
+.gameSection {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    scale: .8;
+    font-size: 110%;
+}
 
+#gamesH2 {
+    font-size: 2.9rem;
+    text-align: center;
+}
+
+#gameP{
+    text-align: center;
+}
+
+.gamesPlayed {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.mainP {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.win-loss{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    font-size: 1.5rem;
+}
+
+.draws {
+    display: flex;
+    justify-content: center;
+    padding-right: 10px;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.span {
+    color:red;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+#choices{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+#choices button {
+    padding: 50px;
+    font-size: 4rem;
+    border-radius: 3px;
+    border: none;
+    background-color: darkgray;
+    transition: 0.3s ease-in;
+}
+
+#choices button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.displayMain {
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+}
+
+.roundsPlayed {
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 50px;
+    background-color: burlywood;
+    padding: 80px;
+}
+
+.roundsPlayed h3{ 
+    font-size: 3rem;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+}
+
+.roundsPlayed p{
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.p{
+    margin-bottom: 100px;
+    display: flex;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.modal img {
+    width: 100px;
+    margin: 10px 0;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* RESPONISVE */
+@media screen and (max-width: 768px) {
+    .gameSection {
+        padding: 30px;
+    }
+
+    #gamesH2 {
+        font-size: 2.2rem;
+    }
+
+    .mainP {
+        font-size: 1.7rem;
+    }
+
+    .win-loss,
+    .draws {
+        font-size: 1.2rem;
+        gap: 20px;
+    }
+
+    #choices {
+        gap: 15px;
+    }
+
+    #choices button {
+        font-size: 2.5rem;
+        padding: 30px;
+    }
+
+    .displayMain {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .roundsPlayed {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .roundsPlayed h3 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gameSection {
+        padding: 20px;
+    }
+
+    #gamesH2 {
+        font-size: 1.8rem;
+    }
+
+    .mainP {
+        font-size: 1.4rem;
+    }
+
+    .win-loss,
+    .draws {
+        font-size: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #choices {
+        gap: 10px;
+    }
+
+    #choices button {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .roundsPlayed {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .roundsPlayed h3 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
 
 /* FOOTER SECTION */
 .footerMain {

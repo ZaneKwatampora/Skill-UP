@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,14 @@
     <link rel="stylesheet" href="pong.css">
     <title>Ping Pong</title>
 </head>
+
 <body>
+    <!-- NAVBAR -->
     <nav>
         <div class="menu-bar">
             <a href="index.html" class="logo">
                 <h1 class="logo">Skill-UP <i class="fa-regular fa-hand-pointer"></i></h1>
             </a>
-            <div>
-                <ul>
-                    <li>
-                        <h1 class="gamepad"><i class="fa-solid fa-gamepad"></i></h1>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li><a href="hangman.html">Hangman</a></li>
-                                <li><a href="minesweeper.html">Mine Sweeper</a></li>
-                                <li><a href="pong.html">Ping Pong</a></li>
-                                <li><a href="chess.html">Chess</a></li>
-                                <li><a href="rps.html">Rock Paper Scissors</a></li>
-                                <li><a href="ttt.html">Tic Tac Toe</a></li>
-                                <li><a href="whac.html">Whac-a-Mole</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -40,8 +25,16 @@
         </div>
     </nav>
 
+    <!-- Game SECTION -->
+    <section class="gameSection">
+        <div class="mainGame">
+            <h1>Pong Game</h1>
+            <canvas></canvas>
+            <p>Control the left player by using up and down arrow keys</p>
+        </div>
+    </section>
 
-    
+    <!-- FOOTER -->
     <footer class="footerMain">
         <div class="footer">
             <div class="footer-nav">
@@ -89,4 +82,5 @@
     </footer>
     <script src="pong.js"></script>
 </body>
+
 </html>

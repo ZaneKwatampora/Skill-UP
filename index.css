@@ -16,17 +16,6 @@ body {
     background-color: khaki;
 }
 
-body::before {
-    content: "Screen width: " attr(width);
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: red;
-    color: white;
-    padding: 5px;
-    font-size: 14px;
-    z-index: 9999;
-}
 
 
 /* NAVBAR */
@@ -148,7 +137,7 @@ body::before {
 
 .heroimg {
     text-align: center;
-    font-size: 3.0rem;
+    font-size: 2.0rem;
     padding: 50px 0;
     background-color: var(--color-black);
     color: white;
@@ -247,13 +236,12 @@ body::before {
 .gameh3 {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
     background-color: #141d28;
     padding: 30px;
     margin: 0px auto 60px;
-    display: inline-block;
-    box-shadow: 0px 0px 10px 4px #212b38;
+    display: block;
 }
 
 /* Games Section*/
@@ -451,16 +439,16 @@ body::before {
     margin: 10px;
     padding: 10px;
     padding-top: 20px;
-    background-color: #212b38;
     color: white;
-    box-shadow: 0px 10px 10px 5px darkslategrey;
+    background-color: #212b38;
+    border-radius: 4px;
     margin-left: 50px;
     margin-right: 50px;
 }
 
 #gameReccomendation h1 {
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:Georgia, Times, 'Times New Roman', serif;
     font-size: 3rem;
     border-bottom: 3px solid white;
     margin-left: 100px;
@@ -535,7 +523,6 @@ body::before {
     justify-content: center;
 }
 
-
 .game-list {
     list-style: none;
     margin: 0px;
@@ -547,7 +534,7 @@ body::before {
 }
 
 .game-item {
-    background: white;
+    background: #ffffff;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
