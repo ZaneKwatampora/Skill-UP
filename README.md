@@ -17,7 +17,7 @@ License, which grants you the freedom to use, modify, and distribute the templat
 Click [here](https://zanekwatampora.github.io/Skill-UP/) to view the live demo
 
 ## Bugs
-Currently no known bugs
+- Search feature not searching up games when you have spaces
 
 ## Authors
 - Github [@ZaneKwatampora](https://github.com/ZaneKwatampora)
