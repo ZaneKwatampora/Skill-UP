@@ -228,10 +228,6 @@ const wordList = [
         hint: "A strong desire to know or learn something."
     },
     {
-        word: "unpredictable",
-        hint: "Not able to be foreseen or known beforehand; uncertain."
-    },
-    {
         word: "obfuscate",
         hint: "To confuse or bewilder someone; to make something unclear or difficult to understand."
     },

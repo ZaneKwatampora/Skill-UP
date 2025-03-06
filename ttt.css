@@ -212,6 +212,98 @@ body {
     padding-top: 100px;
     font-size: 2.4rem;
 }
+
+@media (max-width: 1024px) {
+    .mainGameSection {
+      padding: 80px;
+      margin: 80px;
+      scale: 0.8;
+    }
+  
+    .gameSection {
+      padding: 40px;
+    }
+  
+    .container {
+      height: 350px;
+      max-width: 500px;
+    }
+  
+    .playerTitle {
+      font-size: 40px;
+    }
+  
+    .scoreboard {
+      gap: 50px;
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mainGameSection {
+      padding: 60px;
+      margin: 60px;
+      scale: 0.9;
+    }
+  
+    .gameSection {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .container {
+      height: 300px;
+      max-width: 400px;
+    }
+  
+    .playerTitle {
+      font-size: 35px;
+    }
+  
+    .rematch {
+      font-size: 20px;
+      padding: 15px 40px;
+    }
+  
+    .scoreboard {
+      gap: 30px;
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .mainGameSection {
+      padding: 40px;
+      margin: 40px;
+      scale: 1;
+    }
+  
+    .gameSection {
+      padding: 10px;
+    }
+  
+    .container {
+      height: 250px;
+      max-width: 350px;
+    }
+  
+    .playerTitle {
+      font-size: 28px;
+    }
+  
+    .rematch {
+      font-size: 18px;
+      padding: 12px 30px;
+    }
+  
+    .scoreboard {
+      flex-direction: column;
+      gap: 15px;
+      font-size: 1.5rem;
+    }
+  }
+  
   
 
 /* FOOTER SECTION */
